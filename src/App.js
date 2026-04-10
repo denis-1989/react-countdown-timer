@@ -1,23 +1,18 @@
-import './App.css';
-import logo from './logo.svg';
 
 export default function App() {
+  const targetDate = new Date('2026-12-31T23:59:59');
+
+  const now = new Date();
+
+  const difference = targetDate - now;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: 'center', marginTop: '100px' }}>
+      <h1>Countdown Timer</h1>
+
+      <div style={{ fontSize: '40px', marginTop: '20px' }}>
+        {difference}
+      </div>
     </div>
   );
 }
