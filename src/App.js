@@ -21,23 +21,25 @@ export default function App() {
   if (timeLeft <= 0) {
     return (
       <main className="app">
-        <section className="card" aria-label="Countdown complete">
-          <header className="card-header">
-            <div className="badge" aria-hidden="true">
-              React Countdown
-            </div>
-            <h1 className="title">Time is up!</h1>
-            <p className="subtitle">The countdown has finished.</p>
-          </header>
+        <div className="app-shell">
+          <section className="card" aria-label="Countdown complete">
+            <header className="card-header">
+              <div className="badge" aria-hidden="true">
+                React Countdown
+              </div>
+              <h1 className="title">Time is up!</h1>
+              <p className="subtitle">The countdown has finished.</p>
+            </header>
 
-          <div className="divider" role="presentation" />
+            <div className="divider" role="presentation" />
 
-          <footer className="card-footer">
-            <p className="fineprint">
-              Built with React hooks. Update the target date in <code>App.js</code>.
-            </p>
-          </footer>
-        </section>
+            <footer className="card-footer">
+              <p className="fineprint">
+                Built with React hooks. Update the target date in <code>App.js</code>.
+              </p>
+            </footer>
+          </section>
+        </div>
       </main>
     );
   }
@@ -49,47 +51,52 @@ export default function App() {
 
   return (
     <main className="app">
-      <section className="card" aria-label="Countdown">
-        <header className="card-header">
-          <div className="badge" aria-hidden="true">
-            React Countdown
-          </div>
-          <h1 className="title">Countdown to New Year</h1>
-          <p className="subtitle">
-            A clean, responsive countdown UI using <strong>useState</strong> and{' '}
-            <strong>useEffect</strong>.
-          </p>
-        </header>
+      <div className="app-shell">
+        <section className="card" aria-label="Countdown">
+          <header className="card-header">
+            <div className="badge" aria-hidden="true">
+              React Countdown
+            </div>
+            <h1 className="title">Countdown to New Year</h1>
+            <p className="subtitle">
+              A clean, responsive countdown UI using <strong>useState</strong> and{' '}
+              <strong>useEffect</strong>.
+            </p>
+          </header>
 
-        <div className="divider" role="presentation" />
+          <div className="divider" role="presentation" />
 
-        <div className="countdown" aria-label="Countdown timer">
-          <div className="time-box">
-            <span className="time-value">{days}</span>
-            <span className="time-label">Days</span>
+          <div className="card-body">
+            <div className="countdown" aria-label="Countdown timer">
+              <div className="time-box">
+                <span className="time-value">{days}</span>
+                <span className="time-label">Days</span>
+              </div>
+
+              <div className="time-box">
+                <span className="time-value">{hours}</span>
+                <span className="time-label">Hours</span>
+              </div>
+
+              <div className="time-box">
+                <span className="time-value">{minutes}</span>
+                <span className="time-label">Minutes</span>
+              </div>
+
+              <div className="time-box">
+                <span className="time-value">{seconds}</span>
+                <span className="time-label">Seconds</span>
+              </div>
+            </div>
           </div>
 
-          <div className="time-box">
-            <span className="time-value">{hours}</span>
-            <span className="time-label">Hours</span>
-          </div>
-
-          <div className="time-box">
-            <span className="time-value">{minutes}</span>
-            <span className="time-label">Minutes</span>
-          </div>
-
-          <div className="time-box">
-            <span className="time-value">{seconds}</span>
-            <span className="time-label">Seconds</span>
-          </div>
-        </div>
-        <footer className="card-footer">
-          <p className="fineprint">
-            Target date: <span className="mono">2026-12-31 23:59:59</span>
-          </p>
-        </footer>
-      </section>
+          <footer className="card-footer">
+            <p className="fineprint">
+              Target date: <span className="mono">2026-12-31 23:59:59</span>
+            </p>
+          </footer>
+        </section>
+      </div>
     </main>
   );
 }
